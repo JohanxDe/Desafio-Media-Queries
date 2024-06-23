@@ -1,0 +1,338 @@
+/*
+@media (min-width: 576px){
+    body{
+        background-color: aqua;
+        color: red;
+    }
+     .prueba{
+        display: flex;
+    }
+    button{
+        border-radius: 5px;
+        background-color: chartreuse;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        background-color: black;
+    }
+    p{
+        color: white;
+    }
+    button{
+        background-color: aqua;
+    }
+    .prueba{
+        display: flex;
+    }
+}
+
+@media (min-width: 992px){
+    body{
+        background-color: white;
+    }
+    p{
+        color: chocolate;
+        display: flex;
+    }
+    button{
+        background-color: red;
+    }
+
+    .prueba{
+        display: flex;
+    }
+}
+
+@media (max-width: 575px){
+    body{
+        background-color: black;
+    }
+    p{
+        color: white;
+    }
+
+    .prueba{
+        display: flex;
+    }
+}
+*/
+
+header{
+    grid-area: header;
+}
+
+menu{
+    grid-area: menu;
+    background-color: rgb(72, 121, 111 );
+    padding: 0;
+    margin: 0;
+}
+
+
+main{
+    grid-area: main;
+    /* background-color: rgb(231, 255, 236); */
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(72, 121, 111 );
+}
+
+/* p{
+    background: #749c2c;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+} */
+/* .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+} */
+
+/*
+Aca se programa para dispositivos chicos
+*/
+
+@media (max-width: 576px){
+    .cebecera ul{
+    display: none;
+    }
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "main main main"
+    "footer footer footer";
+}
+
+.cebecera{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .cebecera ul{
+    display: none;
+} */
+
+.cebecera i{
+    padding-right: 5px;
+}
+
+.auto{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-left: 10px;
+
+}
+
+.filtro{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.opciones{
+    padding: 0.675em 6em 0.675em 1em;
+    border-radius: 0.25rem;
+}
+
+main img{
+    /* width: 100px; */
+    height: 100px;
+    padding: 10px;
+}
+
+.cartas{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.carta{
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    /* gap: 5px; */
+    margin-top: 10px;
+    box-shadow:
+         /* inset 0 -3em 3em rgba(0, 0, 0, 0.1), */
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.carta button{
+    background-color: rgb(0, 110, 255);
+    border-radius: 0.10rem;
+    margin-bottom: 5px;
+    padding: 3px 7px 5px 7px;
+    border: 0;
+}
+
+/* .jaj{
+    display: none;
+} */
+
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 0.10rem;
+}
+
+.botones button{
+    background-color: white;
+    border: 0;
+}
+
+.botones a{
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.check{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.logos i{
+    padding-left: 5px;
+}
+
+footer p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* aca se programa para dispositivos medianos
+*/
+
+
+/* @media (max-width: 768px){
+    .cartas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    main{
+        background-color: red;
+    }
+} */
+
+
+/*
+aca se programa para dispositivos grandes
+*/
+
+@media (min-width: 576px){
+    *{
+        margin: 0;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        "header menu menu menu"
+        "header main main main"
+        "footer main main main";
+    }
+
+    menu{
+        background-color: rgb(72, 121, 111 );
+    }
+
+    main img{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    header{
+        background-color: rgb(207, 207, 207);
+        color: white;
+
+    }
+
+    footer{
+        margin: 0;
+    }
+
+    .filtro p{
+        margin: 5px;
+    }
+
+    .cebecera{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px ;
+    }
+
+    .cabecera-flex{
+        display: none;
+    }
+
+    ul{
+        padding-top: 15px;
+    }
+
+    li{
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    li:hover{
+        color: red;
+    }
+
+    .opciones{
+        padding-left: 200px;
+        padding-right: 200px;
+        border-radius: 0.25rem;
+    }
+
+    .cartas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .carta{
+        box-shadow:
+        /* inset 0 -3em 3em rgba(0, 0, 0, 0.1), */
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    }
+
+    .carta:hover{
+        transform: scale(1.1);
+    }
+
+    .botones{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .check{
+        display: none;
+    }
+
+}
+
